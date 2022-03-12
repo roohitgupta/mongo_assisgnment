@@ -1,0 +1,1389 @@
+> show dbs
+admin      0.000GB
+config     0.000GB
+local      0.000GB
+motorHome  0.000GB
+> db
+motorHome
+> db.rohit.count()
+500
+> db.rohit.find({},{movie_name : 1})
+{ "_id" : ObjectId("622c3d3def97528ca4c20b83"), "movie_name" : "Story of Mankind, The" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b84"), "movie_name" : "Starry starry night (Xing kong)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b85"), "movie_name" : "Between the Folds" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b86"), "movie_name" : "Nora's Will (Cinco días sin Nora)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b87"), "movie_name" : "Tale of Two Cities, A" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b88"), "movie_name" : "Machine Girl, The (Kataude mashin gâru)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b89"), "movie_name" : "Fire in the Blood" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8a"), "movie_name" : "And Soon the Darkness" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8b"), "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8c"), "movie_name" : "Dirty Dingus Magee" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8d"), "movie_name" : "Thesis (Tesis)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8e"), "movie_name" : "Tokyo Twilight (Tôkyô boshoku)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8f"), "movie_name" : "Killer Is Loose, The" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b90"), "movie_name" : "Macbeth" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b91"), "movie_name" : "Let it Come Down: The Life of Paul Bowles" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b92"), "movie_name" : "Hellraiser: Deader" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b93"), "movie_name" : "Honkytonk Man" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b94"), "movie_name" : "Get Out of My Room" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b95"), "movie_name" : "Life Aquatic with Steve Zissou, The" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b96"), "movie_name" : "Crying Freeman" }
+Type "it" for more
+>
+>
+> db.rohit.find({ movie_name : "Get Out of My Room" })
+{ "_id" : ObjectId("622c3d3def97528ca4c20b94"), "id" : 18, "movie_name" : "Get Out of My Room", "movie_genre" : "Comedy", "production_year" : 2002, "budget" : 15777 }
+>
+> db.rohit.find()
+{ "_id" : ObjectId("622c3d3def97528ca4c20b83"), "id" : 1, "movie_name" : "Story of Mankind, The", "movie_genre" : "Drama|Fantasy", "production_year" : 2016, "budget" : 9946 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b84"), "id" : 2, "movie_name" : "Starry starry night (Xing kong)", "movie_genre" : "Children|Drama|Fantasy", "production_year" : 2008, "budget" : 10923 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b85"), "id" : 3, "movie_name" : "Between the Folds", "movie_genre" : "Documentary", "production_year" : 2012, "budget" : 16541 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b86"), "id" : 4, "movie_name" : "Nora's Will (Cinco días sin Nora)", "movie_genre" : "Comedy|Drama", "production_year" : 1992, "budget" : 11919 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b87"), "id" : 5, "movie_name" : "Tale of Two Cities, A", "movie_genre" : "Drama|Romance", "production_year" : 2005, "budget" : 17625 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b88"), "id" : 6, "movie_name" : "Machine Girl, The (Kataude mashin gâru)", "movie_genre" : "Action|Comedy|Fantasy|Horror|Thriller", "production_year" : 1992, "budget" : 18471 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b89"), "id" : 7, "movie_name" : "Fire in the Blood", "movie_genre" : "Documentary", "production_year" : 1991, "budget" : 18663 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8a"), "id" : 8, "movie_name" : "And Soon the Darkness", "movie_genre" : "Mystery|Thriller", "production_year" : 1993, "budget" : 11181 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8b"), "id" : 9, "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)", "movie_genre" : "Crime|Drama|Mystery|Thriller|War", "production_year" : 2000, "budget" : 19800 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8c"), "id" : 10, "movie_name" : "Dirty Dingus Magee", "movie_genre" : "Comedy|Western", "production_year" : 1990, "budget" : 9962 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8d"), "id" : 11, "movie_name" : "Thesis (Tesis)", "movie_genre" : "Drama|Horror|Thriller", "production_year" : 2005, "budget" : 9107 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8e"), "id" : 12, "movie_name" : "Tokyo Twilight (Tôkyô boshoku)", "movie_genre" : "Drama", "production_year" : 1999, "budget" : 13817 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8f"), "id" : 13, "movie_name" : "Killer Is Loose, The", "movie_genre" : "Crime|Drama|Film-Noir", "production_year" : 2005, "budget" : 19538 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b90"), "id" : 14, "movie_name" : "Macbeth", "movie_genre" : "Drama", "production_year" : 2005, "budget" : 17329 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b91"), "id" : 15, "movie_name" : "Let it Come Down: The Life of Paul Bowles", "movie_genre" : "Documentary", "production_year" : 1999, "budget" : 13617 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b92"), "id" : 16, "movie_name" : "Hellraiser: Deader", "movie_genre" : "Horror", "production_year" : 2002, "budget" : 11005 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b93"), "id" : 17, "movie_name" : "Honkytonk Man", "movie_genre" : "Comedy|Drama", "production_year" : 2005, "budget" : 17554 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b94"), "id" : 18, "movie_name" : "Get Out of My Room", "movie_genre" : "Comedy", "production_year" : 2002, "budget" : 15777 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b95"), "id" : 19, "movie_name" : "Life Aquatic with Steve Zissou, The", "movie_genre" : "Adventure|Comedy|Fantasy", "production_year" : 2013, "budget" : 10515 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b96"), "id" : 20, "movie_name" : "Crying Freeman", "movie_genre" : "Action|Crime|Thriller", "production_year" : 2006, "budget" : 13299 }
+Type "it" for more
+>
+>
+> db.rohit.find({ id: {$lte:10}}, {movie_name: 1})
+{ "_id" : ObjectId("622c3d3def97528ca4c20b83"), "movie_name" : "Story of Mankind, The" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b84"), "movie_name" : "Starry starry night (Xing kong)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b85"), "movie_name" : "Between the Folds" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b86"), "movie_name" : "Nora's Will (Cinco días sin Nora)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b87"), "movie_name" : "Tale of Two Cities, A" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b88"), "movie_name" : "Machine Girl, The (Kataude mashin gâru)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b89"), "movie_name" : "Fire in the Blood" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8a"), "movie_name" : "And Soon the Darkness" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8b"), "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8c"), "movie_name" : "Dirty Dingus Magee" }
+> db.rohit.find({ id: {$lte:10}}, {movie_name: 1, id:1})
+{ "_id" : ObjectId("622c3d3def97528ca4c20b83"), "id" : 1, "movie_name" : "Story of Mankind, The" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b84"), "id" : 2, "movie_name" : "Starry starry night (Xing kong)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b85"), "id" : 3, "movie_name" : "Between the Folds" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b86"), "id" : 4, "movie_name" : "Nora's Will (Cinco días sin Nora)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b87"), "id" : 5, "movie_name" : "Tale of Two Cities, A" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b88"), "id" : 6, "movie_name" : "Machine Girl, The (Kataude mashin gâru)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b89"), "id" : 7, "movie_name" : "Fire in the Blood" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8a"), "id" : 8, "movie_name" : "And Soon the Darkness" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8b"), "id" : 9, "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8c"), "id" : 10, "movie_name" : "Dirty Dingus Magee" }
+> db.rohit.find({ id: {$lte:10}}, {movie_name: 1, id:1, _id:0})
+{ "id" : 1, "movie_name" : "Story of Mankind, The" }
+{ "id" : 2, "movie_name" : "Starry starry night (Xing kong)" }
+{ "id" : 3, "movie_name" : "Between the Folds" }
+{ "id" : 4, "movie_name" : "Nora's Will (Cinco días sin Nora)" }
+{ "id" : 5, "movie_name" : "Tale of Two Cities, A" }
+{ "id" : 6, "movie_name" : "Machine Girl, The (Kataude mashin gâru)" }
+{ "id" : 7, "movie_name" : "Fire in the Blood" }
+{ "id" : 8, "movie_name" : "And Soon the Darkness" }
+{ "id" : 9, "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)" }
+{ "id" : 10, "movie_name" : "Dirty Dingus Magee" }
+> db.rohit.find({ id: {$lte:10}}, {movie_name: 1, _id:0})
+{ "movie_name" : "Story of Mankind, The" }
+{ "movie_name" : "Starry starry night (Xing kong)" }
+{ "movie_name" : "Between the Folds" }
+{ "movie_name" : "Nora's Will (Cinco días sin Nora)" }
+{ "movie_name" : "Tale of Two Cities, A" }
+{ "movie_name" : "Machine Girl, The (Kataude mashin gâru)" }
+{ "movie_name" : "Fire in the Blood" }
+{ "movie_name" : "And Soon the Darkness" }
+{ "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)" }
+{ "movie_name" : "Dirty Dingus Magee" }
+> db.rohit.find({ id: {$lte:10}}, {movie_name: 1, _id:1})
+{ "_id" : ObjectId("622c3d3def97528ca4c20b83"), "movie_name" : "Story of Mankind, The" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b84"), "movie_name" : "Starry starry night (Xing kong)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b85"), "movie_name" : "Between the Folds" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b86"), "movie_name" : "Nora's Will (Cinco días sin Nora)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b87"), "movie_name" : "Tale of Two Cities, A" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b88"), "movie_name" : "Machine Girl, The (Kataude mashin gâru)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b89"), "movie_name" : "Fire in the Blood" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8a"), "movie_name" : "And Soon the Darkness" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8b"), "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)" }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8c"), "movie_name" : "Dirty Dingus Magee" }
+> db.rohit.find({ id: {$lte:10}}, {movie_name: 1,, _id:1})
+uncaught exception: SyntaxError: expected property name, got ',' :
+@(shell):1:47
+> db.rohit.find({ id: {$lte:10}}, {movie_name: 1, budget:1 , _id:1})
+{ "_id" : ObjectId("622c3d3def97528ca4c20b83"), "movie_name" : "Story of Mankind, The", "budget" : 9946 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b84"), "movie_name" : "Starry starry night (Xing kong)", "budget" : 10923 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b85"), "movie_name" : "Between the Folds", "budget" : 16541 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b86"), "movie_name" : "Nora's Will (Cinco días sin Nora)", "budget" : 11919 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b87"), "movie_name" : "Tale of Two Cities, A", "budget" : 17625 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b88"), "movie_name" : "Machine Girl, The (Kataude mashin gâru)", "budget" : 18471 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b89"), "movie_name" : "Fire in the Blood", "budget" : 18663 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8a"), "movie_name" : "And Soon the Darkness", "budget" : 11181 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8b"), "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)", "budget" : 19800 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8c"), "movie_name" : "Dirty Dingus Magee", "budget" : 9962 }
+> db.rohit.find({ id: {$lte:10}}, {movie_name: 1, budget:1 , _id:0})
+{ "movie_name" : "Story of Mankind, The", "budget" : 9946 }
+{ "movie_name" : "Starry starry night (Xing kong)", "budget" : 10923 }
+{ "movie_name" : "Between the Folds", "budget" : 16541 }
+{ "movie_name" : "Nora's Will (Cinco días sin Nora)", "budget" : 11919 }
+{ "movie_name" : "Tale of Two Cities, A", "budget" : 17625 }
+{ "movie_name" : "Machine Girl, The (Kataude mashin gâru)", "budget" : 18471 }
+{ "movie_name" : "Fire in the Blood", "budget" : 18663 }
+{ "movie_name" : "And Soon the Darkness", "budget" : 11181 }
+{ "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)", "budget" : 19800 }
+{ "movie_name" : "Dirty Dingus Magee", "budget" : 9962 }
+> db.rohit.find({ movie_name: { $ne : " Fire in the Blood " }  })
+{ "_id" : ObjectId("622c3d3def97528ca4c20b83"), "id" : 1, "movie_name" : "Story of Mankind, The", "movie_genre" : "Drama|Fantasy", "production_year" : 2016, "budget" : 9946 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b84"), "id" : 2, "movie_name" : "Starry starry night (Xing kong)", "movie_genre" : "Children|Drama|Fantasy", "production_year" : 2008, "budget" : 10923 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b85"), "id" : 3, "movie_name" : "Between the Folds", "movie_genre" : "Documentary", "production_year" : 2012, "budget" : 16541 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b86"), "id" : 4, "movie_name" : "Nora's Will (Cinco días sin Nora)", "movie_genre" : "Comedy|Drama", "production_year" : 1992, "budget" : 11919 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b87"), "id" : 5, "movie_name" : "Tale of Two Cities, A", "movie_genre" : "Drama|Romance", "production_year" : 2005, "budget" : 17625 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b88"), "id" : 6, "movie_name" : "Machine Girl, The (Kataude mashin gâru)", "movie_genre" : "Action|Comedy|Fantasy|Horror|Thriller", "production_year" : 1992, "budget" : 18471 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b89"), "id" : 7, "movie_name" : "Fire in the Blood", "movie_genre" : "Documentary", "production_year" : 1991, "budget" : 18663 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8a"), "id" : 8, "movie_name" : "And Soon the Darkness", "movie_genre" : "Mystery|Thriller", "production_year" : 1993, "budget" : 11181 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8b"), "id" : 9, "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)", "movie_genre" : "Crime|Drama|Mystery|Thriller|War", "production_year" : 2000, "budget" : 19800 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8c"), "id" : 10, "movie_name" : "Dirty Dingus Magee", "movie_genre" : "Comedy|Western", "production_year" : 1990, "budget" : 9962 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8d"), "id" : 11, "movie_name" : "Thesis (Tesis)", "movie_genre" : "Drama|Horror|Thriller", "production_year" : 2005, "budget" : 9107 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8e"), "id" : 12, "movie_name" : "Tokyo Twilight (Tôkyô boshoku)", "movie_genre" : "Drama", "production_year" : 1999, "budget" : 13817 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8f"), "id" : 13, "movie_name" : "Killer Is Loose, The", "movie_genre" : "Crime|Drama|Film-Noir", "production_year" : 2005, "budget" : 19538 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b90"), "id" : 14, "movie_name" : "Macbeth", "movie_genre" : "Drama", "production_year" : 2005, "budget" : 17329 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b91"), "id" : 15, "movie_name" : "Let it Come Down: The Life of Paul Bowles", "movie_genre" : "Documentary", "production_year" : 1999, "budget" : 13617 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b92"), "id" : 16, "movie_name" : "Hellraiser: Deader", "movie_genre" : "Horror", "production_year" : 2002, "budget" : 11005 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b93"), "id" : 17, "movie_name" : "Honkytonk Man", "movie_genre" : "Comedy|Drama", "production_year" : 2005, "budget" : 17554 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b94"), "id" : 18, "movie_name" : "Get Out of My Room", "movie_genre" : "Comedy", "production_year" : 2002, "budget" : 15777 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b95"), "id" : 19, "movie_name" : "Life Aquatic with Steve Zissou, The", "movie_genre" : "Adventure|Comedy|Fantasy", "production_year" : 2013, "budget" : 10515 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b96"), "id" : 20, "movie_name" : "Crying Freeman", "movie_genre" : "Action|Crime|Thriller", "production_year" : 2006, "budget" : 13299 }
+Type "it" for more
+>
+> db.rohit.find({ movie_name: { $ne : " Fire in the Blood " }  }, { _id: 0, id:1, movie_name:1  })
+{ "id" : 1, "movie_name" : "Story of Mankind, The" }
+{ "id" : 2, "movie_name" : "Starry starry night (Xing kong)" }
+{ "id" : 3, "movie_name" : "Between the Folds" }
+{ "id" : 4, "movie_name" : "Nora's Will (Cinco días sin Nora)" }
+{ "id" : 5, "movie_name" : "Tale of Two Cities, A" }
+{ "id" : 6, "movie_name" : "Machine Girl, The (Kataude mashin gâru)" }
+{ "id" : 7, "movie_name" : "Fire in the Blood" }
+{ "id" : 8, "movie_name" : "And Soon the Darkness" }
+{ "id" : 9, "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)" }
+{ "id" : 10, "movie_name" : "Dirty Dingus Magee" }
+{ "id" : 11, "movie_name" : "Thesis (Tesis)" }
+{ "id" : 12, "movie_name" : "Tokyo Twilight (Tôkyô boshoku)" }
+{ "id" : 13, "movie_name" : "Killer Is Loose, The" }
+{ "id" : 14, "movie_name" : "Macbeth" }
+{ "id" : 15, "movie_name" : "Let it Come Down: The Life of Paul Bowles" }
+{ "id" : 16, "movie_name" : "Hellraiser: Deader" }
+{ "id" : 17, "movie_name" : "Honkytonk Man" }
+{ "id" : 18, "movie_name" : "Get Out of My Room" }
+{ "id" : 19, "movie_name" : "Life Aquatic with Steve Zissou, The" }
+{ "id" : 20, "movie_name" : "Crying Freeman" }
+Type "it" for more
+> db.rohit.find({ movie_name: { $not : " Fire in the Blood " }  }, { _id: 0, id:1, movie_name:1  })
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "$not needs a regex or a document",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.rohit.find({ movie_name: { $ne : " Fire in the Blood " }  }, { _id: 0, id:1, movie_name:1  })
+{ "id" : 1, "movie_name" : "Story of Mankind, The" }
+{ "id" : 2, "movie_name" : "Starry starry night (Xing kong)" }
+{ "id" : 3, "movie_name" : "Between the Folds" }
+{ "id" : 4, "movie_name" : "Nora's Will (Cinco días sin Nora)" }
+{ "id" : 5, "movie_name" : "Tale of Two Cities, A" }
+{ "id" : 6, "movie_name" : "Machine Girl, The (Kataude mashin gâru)" }
+{ "id" : 7, "movie_name" : "Fire in the Blood" }
+{ "id" : 8, "movie_name" : "And Soon the Darkness" }
+{ "id" : 9, "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)" }
+{ "id" : 10, "movie_name" : "Dirty Dingus Magee" }
+{ "id" : 11, "movie_name" : "Thesis (Tesis)" }
+{ "id" : 12, "movie_name" : "Tokyo Twilight (Tôkyô boshoku)" }
+{ "id" : 13, "movie_name" : "Killer Is Loose, The" }
+{ "id" : 14, "movie_name" : "Macbeth" }
+{ "id" : 15, "movie_name" : "Let it Come Down: The Life of Paul Bowles" }
+{ "id" : 16, "movie_name" : "Hellraiser: Deader" }
+{ "id" : 17, "movie_name" : "Honkytonk Man" }
+{ "id" : 18, "movie_name" : "Get Out of My Room" }
+{ "id" : 19, "movie_name" : "Life Aquatic with Steve Zissou, The" }
+{ "id" : 20, "movie_name" : "Crying Freeman" }
+Type "it" for more
+> db.rohit.find({ movie_name: { $ne : "Fire in the Blood" }  }, { _id: 0, id:1, movie_name:1  })
+{ "id" : 1, "movie_name" : "Story of Mankind, The" }
+{ "id" : 2, "movie_name" : "Starry starry night (Xing kong)" }
+{ "id" : 3, "movie_name" : "Between the Folds" }
+{ "id" : 4, "movie_name" : "Nora's Will (Cinco días sin Nora)" }
+{ "id" : 5, "movie_name" : "Tale of Two Cities, A" }
+{ "id" : 6, "movie_name" : "Machine Girl, The (Kataude mashin gâru)" }
+{ "id" : 8, "movie_name" : "And Soon the Darkness" }
+{ "id" : 9, "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)" }
+{ "id" : 10, "movie_name" : "Dirty Dingus Magee" }
+{ "id" : 11, "movie_name" : "Thesis (Tesis)" }
+{ "id" : 12, "movie_name" : "Tokyo Twilight (Tôkyô boshoku)" }
+{ "id" : 13, "movie_name" : "Killer Is Loose, The" }
+{ "id" : 14, "movie_name" : "Macbeth" }
+{ "id" : 15, "movie_name" : "Let it Come Down: The Life of Paul Bowles" }
+{ "id" : 16, "movie_name" : "Hellraiser: Deader" }
+{ "id" : 17, "movie_name" : "Honkytonk Man" }
+{ "id" : 18, "movie_name" : "Get Out of My Room" }
+{ "id" : 19, "movie_name" : "Life Aquatic with Steve Zissou, The" }
+{ "id" : 20, "movie_name" : "Crying Freeman" }
+{ "id" : 21, "movie_name" : "Other Guys, The" }
+Type "it" for more
+>
+>
+> db.rohit.find({ movie_name: { $eq : "Fire in the Blood" }  }, { _id: 0, id:1, movie_name:1  })
+{ "id" : 7, "movie_name" : "Fire in the Blood" }
+>
+>
+> db.rohit.find({ movie_name: { $eq : "Fire in the Blood" }  }, { _id: 0,})
+{ "id" : 7, "movie_name" : "Fire in the Blood", "movie_genre" : "Documentary", "production_year" : 1991, "budget" : 18663 }
+>
+>
+> db.rohit.find({ budget : { $gte : "15000" }  }, { _id: 0, movie_name:1, budget:1})
+> db.rohit.find({ budget : { $gte : "15000" }  }, { _id: 0, movie_name:1, budget:1})
+> db.rohit.find({ budget : { $gte : "11000" }  }, { _id: 0, movie_name:1, budget:1})
+> db.rohit.find({ budget : { $gte : 11000 }  }, { _id: 0, movie_name:1, budget:1})
+{ "movie_name" : "Between the Folds", "budget" : 16541 }
+{ "movie_name" : "Nora's Will (Cinco días sin Nora)", "budget" : 11919 }
+{ "movie_name" : "Tale of Two Cities, A", "budget" : 17625 }
+{ "movie_name" : "Machine Girl, The (Kataude mashin gâru)", "budget" : 18471 }
+{ "movie_name" : "Fire in the Blood", "budget" : 18663 }
+{ "movie_name" : "And Soon the Darkness", "budget" : 11181 }
+{ "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)", "budget" : 19800 }
+{ "movie_name" : "Tokyo Twilight (Tôkyô boshoku)", "budget" : 13817 }
+{ "movie_name" : "Killer Is Loose, The", "budget" : 19538 }
+{ "movie_name" : "Macbeth", "budget" : 17329 }
+{ "movie_name" : "Let it Come Down: The Life of Paul Bowles", "budget" : 13617 }
+{ "movie_name" : "Hellraiser: Deader", "budget" : 11005 }
+{ "movie_name" : "Honkytonk Man", "budget" : 17554 }
+{ "movie_name" : "Get Out of My Room", "budget" : 15777 }
+{ "movie_name" : "Crying Freeman", "budget" : 13299 }
+{ "movie_name" : "Other Guys, The", "budget" : 17696 }
+{ "movie_name" : "Puckoon", "budget" : 17060 }
+{ "movie_name" : "Reflecting Skin, The", "budget" : 13277 }
+{ "movie_name" : "Shepherd", "budget" : 12695 }
+{ "movie_name" : "Elephant", "budget" : 12371 }
+Type "it" for more
+>
+> db.rohit.find({budget:{$gt:14450}}, { _id:0, movie_name:1 })
+{ "movie_name" : "Between the Folds" }
+{ "movie_name" : "Tale of Two Cities, A" }
+{ "movie_name" : "Machine Girl, The (Kataude mashin gâru)" }
+{ "movie_name" : "Fire in the Blood" }
+{ "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)" }
+{ "movie_name" : "Killer Is Loose, The" }
+{ "movie_name" : "Macbeth" }
+{ "movie_name" : "Honkytonk Man" }
+{ "movie_name" : "Get Out of My Room" }
+{ "movie_name" : "Other Guys, The" }
+{ "movie_name" : "Puckoon" }
+{ "movie_name" : "Riot on Sunset Strip" }
+{ "movie_name" : "Cool Hand Luke" }
+{ "movie_name" : "Shara (Sharasojyu)" }
+{ "movie_name" : "Darkness Falls" }
+{ "movie_name" : "Halloweentown II: Kalabar's Revenge" }
+{ "movie_name" : "Corn on the Cop" }
+{ "movie_name" : "Talk to Me" }
+{ "movie_name" : "Dante's Inferno" }
+{ "movie_name" : "Sexual Chronicles of a French Family (Chroniques sexuelles d'une famille d'aujourd'hui)" }
+Type "it" for more
+> db.rohit.find({budget:{$gt:14450}}, { _id:0, movie_name:1, budget:1 })
+{ "movie_name" : "Between the Folds", "budget" : 16541 }
+{ "movie_name" : "Tale of Two Cities, A", "budget" : 17625 }
+{ "movie_name" : "Machine Girl, The (Kataude mashin gâru)", "budget" : 18471 }
+{ "movie_name" : "Fire in the Blood", "budget" : 18663 }
+{ "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)", "budget" : 19800 }
+{ "movie_name" : "Killer Is Loose, The", "budget" : 19538 }
+{ "movie_name" : "Macbeth", "budget" : 17329 }
+{ "movie_name" : "Honkytonk Man", "budget" : 17554 }
+{ "movie_name" : "Get Out of My Room", "budget" : 15777 }
+{ "movie_name" : "Other Guys, The", "budget" : 17696 }
+{ "movie_name" : "Puckoon", "budget" : 17060 }
+{ "movie_name" : "Riot on Sunset Strip", "budget" : 18018 }
+{ "movie_name" : "Cool Hand Luke", "budget" : 15779 }
+{ "movie_name" : "Shara (Sharasojyu)", "budget" : 18762 }
+{ "movie_name" : "Darkness Falls", "budget" : 17076 }
+{ "movie_name" : "Halloweentown II: Kalabar's Revenge", "budget" : 19051 }
+{ "movie_name" : "Corn on the Cop", "budget" : 19536 }
+{ "movie_name" : "Talk to Me", "budget" : 16729 }
+{ "movie_name" : "Dante's Inferno", "budget" : 15627 }
+{ "movie_name" : "Sexual Chronicles of a French Family (Chroniques sexuelles d'une famille d'aujourd'hui)", "budget" : 19777 }
+Type "it" for more
+>
+>
+> db.rohit.find({budget:{ $lt:10000 }},{_id:0, budget:1})
+{ "budget" : 9946 }
+{ "budget" : 9962 }
+{ "budget" : 9107 }
+{ "budget" : 9240 }
+{ "budget" : 9376 }
+{ "budget" : 9723 }
+{ "budget" : 9452 }
+{ "budget" : 9770 }
+{ "budget" : 9300 }
+{ "budget" : 9722 }
+{ "budget" : 9948 }
+{ "budget" : 9147 }
+{ "budget" : 9847 }
+{ "budget" : 9006 }
+{ "budget" : 9291 }
+{ "budget" : 9941 }
+{ "budget" : 9031 }
+{ "budget" : 9071 }
+{ "budget" : 9067 }
+{ "budget" : 9379 }
+Type "it" for more
+> db.rohit.find({budget:{ $lte:10000 }},{_id:0, budget:1})
+{ "budget" : 9946 }
+{ "budget" : 9962 }
+{ "budget" : 9107 }
+{ "budget" : 9240 }
+{ "budget" : 9376 }
+{ "budget" : 9723 }
+{ "budget" : 9452 }
+{ "budget" : 9770 }
+{ "budget" : 9300 }
+{ "budget" : 9722 }
+{ "budget" : 9948 }
+{ "budget" : 9147 }
+{ "budget" : 9847 }
+{ "budget" : 9006 }
+{ "budget" : 9291 }
+{ "budget" : 9941 }
+{ "budget" : 9031 }
+{ "budget" : 9071 }
+{ "budget" : 9067 }
+{ "budget" : 9379 }
+Type "it" for more
+>
+>
+> db.rohit.find({ production_year: {$gt:2000}, budget: {$gt:10000} },{_id:0, production_year:1, budget:1 })
+{ "production_year" : 2008, "budget" : 10923 }
+{ "production_year" : 2012, "budget" : 16541 }
+{ "production_year" : 2005, "budget" : 17625 }
+{ "production_year" : 2005, "budget" : 19538 }
+{ "production_year" : 2005, "budget" : 17329 }
+{ "production_year" : 2002, "budget" : 11005 }
+{ "production_year" : 2005, "budget" : 17554 }
+{ "production_year" : 2002, "budget" : 15777 }
+{ "production_year" : 2013, "budget" : 10515 }
+{ "production_year" : 2006, "budget" : 13299 }
+{ "production_year" : 2017, "budget" : 12695 }
+{ "production_year" : 2003, "budget" : 12371 }
+{ "production_year" : 2008, "budget" : 12422 }
+{ "production_year" : 2020, "budget" : 14313 }
+{ "production_year" : 2017, "budget" : 12022 }
+{ "production_year" : 2011, "budget" : 18018 }
+{ "production_year" : 2003, "budget" : 13640 }
+{ "production_year" : 2004, "budget" : 15779 }
+{ "production_year" : 2008, "budget" : 19051 }
+{ "production_year" : 2003, "budget" : 16729 }
+Type "it" for more
+>
+>
+> db
+motorHome
+> db.rohit.count()
+500
+> db.rohit.find({ $or: [{production_year: { &gt: 2000 } }, { budget: { &gt: 10000 } }] })
+uncaught exception: SyntaxError: expected property name, got '&' :
+@(shell):1:42
+> db.rohit.find({ $or: [{production_year: { $gt: 2000 } }, { budget: { $gt: 10000 } }] })
+{ "_id" : ObjectId("622c3d3def97528ca4c20b83"), "id" : 1, "movie_name" : "Story of Mankind, The", "movie_genre" : "Drama|Fantasy", "production_year" : 2016, "budget" : 9946 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b84"), "id" : 2, "movie_name" : "Starry starry night (Xing kong)", "movie_genre" : "Children|Drama|Fantasy", "production_year" : 2008, "budget" : 10923 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b85"), "id" : 3, "movie_name" : "Between the Folds", "movie_genre" : "Documentary", "production_year" : 2012, "budget" : 16541 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b86"), "id" : 4, "movie_name" : "Nora's Will (Cinco días sin Nora)", "movie_genre" : "Comedy|Drama", "production_year" : 1992, "budget" : 11919 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b87"), "id" : 5, "movie_name" : "Tale of Two Cities, A", "movie_genre" : "Drama|Romance", "production_year" : 2005, "budget" : 17625 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b88"), "id" : 6, "movie_name" : "Machine Girl, The (Kataude mashin gâru)", "movie_genre" : "Action|Comedy|Fantasy|Horror|Thriller", "production_year" : 1992, "budget" : 18471 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b89"), "id" : 7, "movie_name" : "Fire in the Blood", "movie_genre" : "Documentary", "production_year" : 1991, "budget" : 18663 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8a"), "id" : 8, "movie_name" : "And Soon the Darkness", "movie_genre" : "Mystery|Thriller", "production_year" : 1993, "budget" : 11181 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8b"), "id" : 9, "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)", "movie_genre" : "Crime|Drama|Mystery|Thriller|War", "production_year" : 2000, "budget" : 19800 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8d"), "id" : 11, "movie_name" : "Thesis (Tesis)", "movie_genre" : "Drama|Horror|Thriller", "production_year" : 2005, "budget" : 9107 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8e"), "id" : 12, "movie_name" : "Tokyo Twilight (Tôkyô boshoku)", "movie_genre" : "Drama", "production_year" : 1999, "budget" : 13817 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8f"), "id" : 13, "movie_name" : "Killer Is Loose, The", "movie_genre" : "Crime|Drama|Film-Noir", "production_year" : 2005, "budget" : 19538 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b90"), "id" : 14, "movie_name" : "Macbeth", "movie_genre" : "Drama", "production_year" : 2005, "budget" : 17329 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b91"), "id" : 15, "movie_name" : "Let it Come Down: The Life of Paul Bowles", "movie_genre" : "Documentary", "production_year" : 1999, "budget" : 13617 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b92"), "id" : 16, "movie_name" : "Hellraiser: Deader", "movie_genre" : "Horror", "production_year" : 2002, "budget" : 11005 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b93"), "id" : 17, "movie_name" : "Honkytonk Man", "movie_genre" : "Comedy|Drama", "production_year" : 2005, "budget" : 17554 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b94"), "id" : 18, "movie_name" : "Get Out of My Room", "movie_genre" : "Comedy", "production_year" : 2002, "budget" : 15777 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b95"), "id" : 19, "movie_name" : "Life Aquatic with Steve Zissou, The", "movie_genre" : "Adventure|Comedy|Fantasy", "production_year" : 2013, "budget" : 10515 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b96"), "id" : 20, "movie_name" : "Crying Freeman", "movie_genre" : "Action|Crime|Thriller", "production_year" : 2006, "budget" : 13299 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b97"), "id" : 21, "movie_name" : "Other Guys, The", "movie_genre" : "Action|Comedy", "production_year" : 1991, "budget" : 17696 }
+Type "it" for more
+>
+>
+> db.rohit.find({ $or: [{production_year: { $gt: 2000 } }, { budget: { $gt: 10000 } }] }, {_id:0, id:1, movie_name: 1, production_year:1, budget:1 })
+{ "id" : 1, "movie_name" : "Story of Mankind, The", "production_year" : 2016, "budget" : 9946 }
+{ "id" : 2, "movie_name" : "Starry starry night (Xing kong)", "production_year" : 2008, "budget" : 10923 }
+{ "id" : 3, "movie_name" : "Between the Folds", "production_year" : 2012, "budget" : 16541 }
+{ "id" : 4, "movie_name" : "Nora's Will (Cinco días sin Nora)", "production_year" : 1992, "budget" : 11919 }
+{ "id" : 5, "movie_name" : "Tale of Two Cities, A", "production_year" : 2005, "budget" : 17625 }
+{ "id" : 6, "movie_name" : "Machine Girl, The (Kataude mashin gâru)", "production_year" : 1992, "budget" : 18471 }
+{ "id" : 7, "movie_name" : "Fire in the Blood", "production_year" : 1991, "budget" : 18663 }
+{ "id" : 8, "movie_name" : "And Soon the Darkness", "production_year" : 1993, "budget" : 11181 }
+{ "id" : 9, "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)", "production_year" : 2000, "budget" : 19800 }
+{ "id" : 11, "movie_name" : "Thesis (Tesis)", "production_year" : 2005, "budget" : 9107 }
+{ "id" : 12, "movie_name" : "Tokyo Twilight (Tôkyô boshoku)", "production_year" : 1999, "budget" : 13817 }
+{ "id" : 13, "movie_name" : "Killer Is Loose, The", "production_year" : 2005, "budget" : 19538 }
+{ "id" : 14, "movie_name" : "Macbeth", "production_year" : 2005, "budget" : 17329 }
+{ "id" : 15, "movie_name" : "Let it Come Down: The Life of Paul Bowles", "production_year" : 1999, "budget" : 13617 }
+{ "id" : 16, "movie_name" : "Hellraiser: Deader", "production_year" : 2002, "budget" : 11005 }
+{ "id" : 17, "movie_name" : "Honkytonk Man", "production_year" : 2005, "budget" : 17554 }
+{ "id" : 18, "movie_name" : "Get Out of My Room", "production_year" : 2002, "budget" : 15777 }
+{ "id" : 19, "movie_name" : "Life Aquatic with Steve Zissou, The", "production_year" : 2013, "budget" : 10515 }
+{ "id" : 20, "movie_name" : "Crying Freeman", "production_year" : 2006, "budget" : 13299 }
+{ "id" : 21, "movie_name" : "Other Guys, The", "production_year" : 1991, "budget" : 17696 }
+Type "it" for more
+>
+>
+>
+> db.rohit.find({ $or: [{production_year: { $gt: 2000 } }, { budget: { $gt: 10000 } }] }, {_id:0, id:1, movie_name: 1, production_year:1, budget:1 })
+{ "id" : 1, "movie_name" : "Story of Mankind, The", "production_year" : 2016, "budget" : 9946 }
+{ "id" : 2, "movie_name" : "Starry starry night (Xing kong)", "production_year" : 2008, "budget" : 10923 }
+{ "id" : 3, "movie_name" : "Between the Folds", "production_year" : 2012, "budget" : 16541 }
+{ "id" : 4, "movie_name" : "Nora's Will (Cinco días sin Nora)", "production_year" : 1992, "budget" : 11919 }
+{ "id" : 5, "movie_name" : "Tale of Two Cities, A", "production_year" : 2005, "budget" : 17625 }
+{ "id" : 6, "movie_name" : "Machine Girl, The (Kataude mashin gâru)", "production_year" : 1992, "budget" : 18471 }
+{ "id" : 7, "movie_name" : "Fire in the Blood", "production_year" : 1991, "budget" : 18663 }
+{ "id" : 8, "movie_name" : "And Soon the Darkness", "production_year" : 1993, "budget" : 11181 }
+{ "id" : 9, "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)", "production_year" : 2000, "budget" : 19800 }
+{ "id" : 11, "movie_name" : "Thesis (Tesis)", "production_year" : 2005, "budget" : 9107 }
+{ "id" : 12, "movie_name" : "Tokyo Twilight (Tôkyô boshoku)", "production_year" : 1999, "budget" : 13817 }
+{ "id" : 13, "movie_name" : "Killer Is Loose, The", "production_year" : 2005, "budget" : 19538 }
+{ "id" : 14, "movie_name" : "Macbeth", "production_year" : 2005, "budget" : 17329 }
+{ "id" : 15, "movie_name" : "Let it Come Down: The Life of Paul Bowles", "production_year" : 1999, "budget" : 13617 }
+{ "id" : 16, "movie_name" : "Hellraiser: Deader", "production_year" : 2002, "budget" : 11005 }
+{ "id" : 17, "movie_name" : "Honkytonk Man", "production_year" : 2005, "budget" : 17554 }
+{ "id" : 18, "movie_name" : "Get Out of My Room", "production_year" : 2002, "budget" : 15777 }
+{ "id" : 19, "movie_name" : "Life Aquatic with Steve Zissou, The", "production_year" : 2013, "budget" : 10515 }
+{ "id" : 20, "movie_name" : "Crying Freeman", "production_year" : 2006, "budget" : 13299 }
+{ "id" : 21, "movie_name" : "Other Guys, The", "production_year" : 1991, "budget" : 17696 }
+Type "it" for more
+>
+>
+>
+>
+>
+> db.rohit.find({$nor:[{production_year:{$lt: 2000}, {budget:{$lt:10000}}]},{_id:0, id:1, production_year:1, budget:1 })
+... db.rohit.find({ $or: [{production_year: { $gt: 2000 } }, { budget: { $gt: 10000 } }] }, {_id:0, id:1, movie_name: 1, production_year:1, budget:1 })
+...
+...
+>
+> db.rohit.find({ $nor: [{production_year: { $lt: 2000 } }, { budget: { $lt: 10000 } }] }, {_id:0, id:1, production_year:1, budget:1 })
+{ "id" : 2, "production_year" : 2008, "budget" : 10923 }
+{ "id" : 3, "production_year" : 2012, "budget" : 16541 }
+{ "id" : 5, "production_year" : 2005, "budget" : 17625 }
+{ "id" : 9, "production_year" : 2000, "budget" : 19800 }
+{ "id" : 13, "production_year" : 2005, "budget" : 19538 }
+{ "id" : 14, "production_year" : 2005, "budget" : 17329 }
+{ "id" : 16, "production_year" : 2002, "budget" : 11005 }
+{ "id" : 17, "production_year" : 2005, "budget" : 17554 }
+{ "id" : 18, "production_year" : 2002, "budget" : 15777 }
+{ "id" : 19, "production_year" : 2013, "budget" : 10515 }
+{ "id" : 20, "production_year" : 2006, "budget" : 13299 }
+{ "id" : 24, "production_year" : 2017, "budget" : 12695 }
+{ "id" : 25, "production_year" : 2003, "budget" : 12371 }
+{ "id" : 26, "production_year" : 2008, "budget" : 12422 }
+{ "id" : 28, "production_year" : 2020, "budget" : 14313 }
+{ "id" : 29, "production_year" : 2017, "budget" : 12022 }
+{ "id" : 30, "production_year" : 2011, "budget" : 18018 }
+{ "id" : 31, "production_year" : 2003, "budget" : 13640 }
+{ "id" : 32, "production_year" : 2004, "budget" : 15779 }
+{ "id" : 34, "production_year" : 2000, "budget" : 17076 }
+Type "it" for more
+>
+>
+> db.rohit.find({ $nor: [{production_year: { $gt: 2000 } }, { budget: { $gt: 10000 } }] }, {_id:0, id:1, production_year:1, budget:1 })
+{ "id" : 10, "production_year" : 1990, "budget" : 9962 }
+{ "id" : 68, "production_year" : 2000, "budget" : 9452 }
+{ "id" : 84, "production_year" : 1996, "budget" : 9770 }
+{ "id" : 154, "production_year" : 1993, "budget" : 9948 }
+{ "id" : 162, "production_year" : 1997, "budget" : 9847 }
+{ "id" : 291, "production_year" : 1999, "budget" : 9394 }
+{ "id" : 309, "production_year" : 1994, "budget" : 9569 }
+{ "id" : 359, "production_year" : 1998, "budget" : 9948 }
+{ "id" : 376, "production_year" : 2000, "budget" : 9095 }
+{ "id" : 390, "production_year" : 1998, "budget" : 9638 }
+{ "id" : 392, "production_year" : 1997, "budget" : 9413 }
+{ "id" : 440, "production_year" : 1995, "budget" : 9890 }
+{ "id" : 467, "production_year" : 1992, "budget" : 9093 }
+{ "id" : 472, "production_year" : 1992, "budget" : 9432 }
+{ "id" : 481, "production_year" : 1996, "budget" : 9272 }
+{ "id" : 497, "production_year" : 1998, "budget" : 9976 }
+>
+>
+> db.rohit.find( {production_year:{$not: 2000}}, budget:{$not:10000}, { _id:0, id:1, production_year:1, budget:1} )
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:53
+> db.rohit.find( {production_year:{$not: 2000}}, budget:{$not:10000}}, { _id:0, id:1, production_year:1, budget:1} )
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:53
+> db.rohit.find( {production_year:{$not: 2000}}, budget:{$not:10000}}, { _id:0, id:1, production_year:1, budget:1} )
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:53
+> db.rohit.find( {production_year:{$not: 2000}}, {budget:{$not:10000}}, { _id:0, id:1, production_year:1, budget:1} )
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "$not needs a regex or a document",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.rohit.find( {{production_year:{$not: 2000}}, {budget:{$not:10000}}}, { _id:0, id:1, production_year:1, budget:1} )
+uncaught exception: SyntaxError: expected property name, got '{' :
+@(shell):1:16
+> db.rohit.find( {{production_year:{$not: 2000}}, {budget:{$not:10000}}}, { _id:0, id:1, production_year:1, budget:1} )
+uncaught exception: SyntaxError: expected property name, got '{' :
+@(shell):1:16
+> db.rohit.find({{production_year:{$not: 2000}},{budget:{$not:10000}}}, {_id:0, id:1, production_year:1, budget:1})
+uncaught exception: SyntaxError: expected property name, got '{' :
+@(shell):1:15
+> db.rohit.find({{production_year:{$ne: 2000}},{budget:{$ne:10000}}}, {_id:0, id:1, production_year:1, budget:1})
+uncaught exception: SyntaxError: expected property name, got '{' :
+@(shell):1:15
+> db.rohit.find({{production_year:{$ne: 2000}},{budget:{$ne:10000}}}, {_id:0, id:1, production_year:1, budget:1}})
+uncaught exception: SyntaxError: expected property name, got '{' :
+@(shell):1:15
+> db.rohit.find( $or: {{production_year:{$ne: 2000}},{budget:{$ne:10000}}}, {_id:0, id:1, production_year:1, budget:1})
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:18
+> db.rohit.find($ne: [{production_year:2000},{budget:10000}], {_id:0, production_year:1, budget:1, id:1})
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:17
+> db.rohit.find($nor: [{production_year:2000},{budget:10000}], {_id:0, production_year:1, budget:1, id:1})
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:18
+> db.rohit.find({$nor: [{production_year:2000},{budget:10000}]}, {_id:0, production_year:1, budget:1, id:1})
+{ "id" : 1, "production_year" : 2016, "budget" : 9946 }
+{ "id" : 2, "production_year" : 2008, "budget" : 10923 }
+{ "id" : 3, "production_year" : 2012, "budget" : 16541 }
+{ "id" : 4, "production_year" : 1992, "budget" : 11919 }
+{ "id" : 5, "production_year" : 2005, "budget" : 17625 }
+{ "id" : 6, "production_year" : 1992, "budget" : 18471 }
+{ "id" : 7, "production_year" : 1991, "budget" : 18663 }
+{ "id" : 8, "production_year" : 1993, "budget" : 11181 }
+{ "id" : 10, "production_year" : 1990, "budget" : 9962 }
+{ "id" : 11, "production_year" : 2005, "budget" : 9107 }
+{ "id" : 12, "production_year" : 1999, "budget" : 13817 }
+{ "id" : 13, "production_year" : 2005, "budget" : 19538 }
+{ "id" : 14, "production_year" : 2005, "budget" : 17329 }
+{ "id" : 15, "production_year" : 1999, "budget" : 13617 }
+{ "id" : 16, "production_year" : 2002, "budget" : 11005 }
+{ "id" : 17, "production_year" : 2005, "budget" : 17554 }
+{ "id" : 18, "production_year" : 2002, "budget" : 15777 }
+{ "id" : 19, "production_year" : 2013, "budget" : 10515 }
+{ "id" : 20, "production_year" : 2006, "budget" : 13299 }
+{ "id" : 21, "production_year" : 1991, "budget" : 17696 }
+Type "it" for more
+> it
+{ "id" : 22, "production_year" : 1990, "budget" : 17060 }
+{ "id" : 23, "production_year" : 1997, "budget" : 13277 }
+{ "id" : 24, "production_year" : 2017, "budget" : 12695 }
+{ "id" : 25, "production_year" : 2003, "budget" : 12371 }
+{ "id" : 26, "production_year" : 2008, "budget" : 12422 }
+{ "id" : 27, "production_year" : 1990, "budget" : 10708 }
+{ "id" : 28, "production_year" : 2020, "budget" : 14313 }
+{ "id" : 29, "production_year" : 2017, "budget" : 12022 }
+{ "id" : 30, "production_year" : 2011, "budget" : 18018 }
+{ "id" : 31, "production_year" : 2003, "budget" : 13640 }
+{ "id" : 32, "production_year" : 2004, "budget" : 15779 }
+{ "id" : 33, "production_year" : 1996, "budget" : 18762 }
+{ "id" : 35, "production_year" : 1998, "budget" : 13006 }
+{ "id" : 36, "production_year" : 2008, "budget" : 19051 }
+{ "id" : 37, "production_year" : 1992, "budget" : 19536 }
+{ "id" : 38, "production_year" : 1991, "budget" : 12955 }
+{ "id" : 39, "production_year" : 2003, "budget" : 16729 }
+{ "id" : 40, "production_year" : 2011, "budget" : 15627 }
+{ "id" : 41, "production_year" : 2001, "budget" : 9240 }
+{ "id" : 42, "production_year" : 2014, "budget" : 9376 }
+Type "it" for more
+> it
+{ "id" : 43, "production_year" : 2005, "budget" : 19777 }
+{ "id" : 44, "production_year" : 1992, "budget" : 18885 }
+{ "id" : 45, "production_year" : 1999, "budget" : 11978 }
+{ "id" : 46, "production_year" : 1999, "budget" : 17298 }
+{ "id" : 47, "production_year" : 2001, "budget" : 17247 }
+{ "id" : 48, "production_year" : 1992, "budget" : 16042 }
+{ "id" : 49, "production_year" : 2019, "budget" : 12790 }
+{ "id" : 50, "production_year" : 2003, "budget" : 18403 }
+{ "id" : 51, "production_year" : 2012, "budget" : 14766 }
+{ "id" : 52, "production_year" : 1990, "budget" : 17409 }
+{ "id" : 53, "production_year" : 2004, "budget" : 17140 }
+{ "id" : 54, "production_year" : 2004, "budget" : 18858 }
+{ "id" : 55, "production_year" : 2002, "budget" : 16019 }
+{ "id" : 56, "production_year" : 2013, "budget" : 9723 }
+{ "id" : 57, "production_year" : 1994, "budget" : 11242 }
+{ "id" : 58, "production_year" : 2001, "budget" : 16014 }
+{ "id" : 59, "production_year" : 2002, "budget" : 12684 }
+{ "id" : 61, "production_year" : 2018, "budget" : 14715 }
+{ "id" : 62, "production_year" : 2012, "budget" : 12306 }
+{ "id" : 63, "production_year" : 2013, "budget" : 15892 }
+Type "it" for more
+>
+>
+> db.rohit.find({production_year:{{$gte:2000},{$lte:2010}}},{_id:0, id:1, production_year:1})
+uncaught exception: SyntaxError: expected property name, got '{' :
+@(shell):1:32
+> db.rohit.find({production_year:{{$gte:2000},{$lte:2010}}},{_id:0, id:1, production_year:1})
+uncaught exception: SyntaxError: expected property name, got '{' :
+@(shell):1:32
+> db.rohit.find({$or[{production_year:{$gte:2000}},{production_year:{$lte:2010}}]},{_id:0, id:1, production_year:1})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:18
+> db.rohit.find({$or:[{production_year:{$gte:2000}},{production_year:{$lte:2010}}]},{_id:0, id:1, production_year:1})
+{ "id" : 1, "production_year" : 2016 }
+{ "id" : 2, "production_year" : 2008 }
+{ "id" : 3, "production_year" : 2012 }
+{ "id" : 4, "production_year" : 1992 }
+{ "id" : 5, "production_year" : 2005 }
+{ "id" : 6, "production_year" : 1992 }
+{ "id" : 7, "production_year" : 1991 }
+{ "id" : 8, "production_year" : 1993 }
+{ "id" : 9, "production_year" : 2000 }
+{ "id" : 10, "production_year" : 1990 }
+{ "id" : 11, "production_year" : 2005 }
+{ "id" : 12, "production_year" : 1999 }
+{ "id" : 13, "production_year" : 2005 }
+{ "id" : 14, "production_year" : 2005 }
+{ "id" : 15, "production_year" : 1999 }
+{ "id" : 16, "production_year" : 2002 }
+{ "id" : 17, "production_year" : 2005 }
+{ "id" : 18, "production_year" : 2002 }
+{ "id" : 19, "production_year" : 2013 }
+{ "id" : 20, "production_year" : 2006 }
+Type "it" for more
+>
+>
+> db.rohit.find({})
+{ "_id" : ObjectId("622c3d3def97528ca4c20b83"), "id" : 1, "movie_name" : "Story of Mankind, The", "movie_genre" : "Drama|Fantasy", "production_year" : 2016, "budget" : 9946 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b84"), "id" : 2, "movie_name" : "Starry starry night (Xing kong)", "movie_genre" : "Children|Drama|Fantasy", "production_year" : 2008, "budget" : 10923 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b85"), "id" : 3, "movie_name" : "Between the Folds", "movie_genre" : "Documentary", "production_year" : 2012, "budget" : 16541 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b86"), "id" : 4, "movie_name" : "Nora's Will (Cinco días sin Nora)", "movie_genre" : "Comedy|Drama", "production_year" : 1992, "budget" : 11919 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b87"), "id" : 5, "movie_name" : "Tale of Two Cities, A", "movie_genre" : "Drama|Romance", "production_year" : 2005, "budget" : 17625 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b88"), "id" : 6, "movie_name" : "Machine Girl, The (Kataude mashin gâru)", "movie_genre" : "Action|Comedy|Fantasy|Horror|Thriller", "production_year" : 1992, "budget" : 18471 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b89"), "id" : 7, "movie_name" : "Fire in the Blood", "movie_genre" : "Documentary", "production_year" : 1991, "budget" : 18663 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8a"), "id" : 8, "movie_name" : "And Soon the Darkness", "movie_genre" : "Mystery|Thriller", "production_year" : 1993, "budget" : 11181 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8b"), "id" : 9, "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)", "movie_genre" : "Crime|Drama|Mystery|Thriller|War", "production_year" : 2000, "budget" : 19800 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8c"), "id" : 10, "movie_name" : "Dirty Dingus Magee", "movie_genre" : "Comedy|Western", "production_year" : 1990, "budget" : 9962 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8d"), "id" : 11, "movie_name" : "Thesis (Tesis)", "movie_genre" : "Drama|Horror|Thriller", "production_year" : 2005, "budget" : 9107 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8e"), "id" : 12, "movie_name" : "Tokyo Twilight (Tôkyô boshoku)", "movie_genre" : "Drama", "production_year" : 1999, "budget" : 13817 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8f"), "id" : 13, "movie_name" : "Killer Is Loose, The", "movie_genre" : "Crime|Drama|Film-Noir", "production_year" : 2005, "budget" : 19538 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b90"), "id" : 14, "movie_name" : "Macbeth", "movie_genre" : "Drama", "production_year" : 2005, "budget" : 17329 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b91"), "id" : 15, "movie_name" : "Let it Come Down: The Life of Paul Bowles", "movie_genre" : "Documentary", "production_year" : 1999, "budget" : 13617 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b92"), "id" : 16, "movie_name" : "Hellraiser: Deader", "movie_genre" : "Horror", "production_year" : 2002, "budget" : 11005 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b93"), "id" : 17, "movie_name" : "Honkytonk Man", "movie_genre" : "Comedy|Drama", "production_year" : 2005, "budget" : 17554 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b94"), "id" : 18, "movie_name" : "Get Out of My Room", "movie_genre" : "Comedy", "production_year" : 2002, "budget" : 15777 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b95"), "id" : 19, "movie_name" : "Life Aquatic with Steve Zissou, The", "movie_genre" : "Adventure|Comedy|Fantasy", "production_year" : 2013, "budget" : 10515 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b96"), "id" : 20, "movie_name" : "Crying Freeman", "movie_genre" : "Action|Crime|Thriller", "production_year" : 2006, "budget" : 13299 }
+Type "it" for more
+>
+>
+> db.rohit.find({ production_year: {$gt:2000}, {$lt:2010}})
+uncaught exception: SyntaxError: expected property name, got '{' :
+@(shell):1:45
+> db.rohit.find( { $and: [ {production_year:{$gt:2000} }, {production_year:{$lt:2010} } ] }, {_id:0, id:1, production_year:1} )
+{ "id" : 2, "production_year" : 2008 }
+{ "id" : 5, "production_year" : 2005 }
+{ "id" : 11, "production_year" : 2005 }
+{ "id" : 13, "production_year" : 2005 }
+{ "id" : 14, "production_year" : 2005 }
+{ "id" : 16, "production_year" : 2002 }
+{ "id" : 17, "production_year" : 2005 }
+{ "id" : 18, "production_year" : 2002 }
+{ "id" : 20, "production_year" : 2006 }
+{ "id" : 25, "production_year" : 2003 }
+{ "id" : 26, "production_year" : 2008 }
+{ "id" : 31, "production_year" : 2003 }
+{ "id" : 32, "production_year" : 2004 }
+{ "id" : 36, "production_year" : 2008 }
+{ "id" : 39, "production_year" : 2003 }
+{ "id" : 41, "production_year" : 2001 }
+{ "id" : 43, "production_year" : 2005 }
+{ "id" : 47, "production_year" : 2001 }
+{ "id" : 50, "production_year" : 2003 }
+{ "id" : 53, "production_year" : 2004 }
+Type "it" for more
+>
+> db.rohit.find( { $and: [ {production_year:{$gt:2000}, {$lt:2010} } ] }, {_id:0, id:1, production_year:1} )
+uncaught exception: SyntaxError: expected property name, got '{' :
+@(shell):1:54
+> db.rohit.find( { $and: {production_year:[{$gt:2000}, {$lt:2010}]}  }, {_id:0, id:1, production_year:1} )
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "$and must be an array",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.rohit.find( { $and: [ {production_year:{$gt:2000} }, {production_year:{$lt:2010} } ] }, {_id:0, id:1, production_year:1} )
+{ "id" : 2, "production_year" : 2008 }
+{ "id" : 5, "production_year" : 2005 }
+{ "id" : 11, "production_year" : 2005 }
+{ "id" : 13, "production_year" : 2005 }
+{ "id" : 14, "production_year" : 2005 }
+{ "id" : 16, "production_year" : 2002 }
+{ "id" : 17, "production_year" : 2005 }
+{ "id" : 18, "production_year" : 2002 }
+{ "id" : 20, "production_year" : 2006 }
+{ "id" : 25, "production_year" : 2003 }
+{ "id" : 26, "production_year" : 2008 }
+{ "id" : 31, "production_year" : 2003 }
+{ "id" : 32, "production_year" : 2004 }
+{ "id" : 36, "production_year" : 2008 }
+{ "id" : 39, "production_year" : 2003 }
+{ "id" : 41, "production_year" : 2001 }
+{ "id" : 43, "production_year" : 2005 }
+{ "id" : 47, "production_year" : 2001 }
+{ "id" : 50, "production_year" : 2003 }
+{ "id" : 53, "production_year" : 2004 }
+Type "it" for more
+>
+> db.rohit.find().sort({production_year:-1})
+{ "_id" : ObjectId("622c3d3def97528ca4c20b9e"), "id" : 28, "movie_name" : "Follow the Fleet", "movie_genre" : "Comedy|Musical|Romance", "production_year" : 2020, "budget" : 14313 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20bcb"), "id" : 73, "movie_name" : "Heavenly Forest", "movie_genre" : "Drama|Romance", "production_year" : 2020, "budget" : 16092 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20bd0"), "id" : 78, "movie_name" : "The Unexpected Love", "movie_genre" : "Comedy|Drama", "production_year" : 2020, "budget" : 15734 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20bd9"), "id" : 87, "movie_name" : "Ramona and Beezus", "movie_genre" : "Children|Comedy", "production_year" : 2020, "budget" : 19723 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20be3"), "id" : 97, "movie_name" : "Dragonball Evolution", "movie_genre" : "Action|Adventure|Fantasy|Sci-Fi", "production_year" : 2020, "budget" : 18228 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20c43"), "id" : 193, "movie_name" : "Not Here to Be Loved (Je ne suis pas là pour être aimé)", "movie_genre" : "Drama|Romance", "production_year" : 2020, "budget" : 11475 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20c46"), "id" : 196, "movie_name" : "Sommersby", "movie_genre" : "Drama|Mystery|Romance", "production_year" : 2020, "budget" : 10273 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20c52"), "id" : 208, "movie_name" : "Lucky Night", "movie_genre" : "Drama|Romance", "production_year" : 2020, "budget" : 11085 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20c90"), "id" : 270, "movie_name" : "Hell Ride", "movie_genre" : "Action|Drama|Thriller", "production_year" : 2020, "budget" : 11458 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20ca2"), "id" : 288, "movie_name" : "Nothing to Lose", "movie_genre" : "Action|Adventure|Comedy|Crime", "production_year" : 2020, "budget" : 15123 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20cae"), "id" : 300, "movie_name" : "Spy(ies) (Espion(s))", "movie_genre" : "Drama|Romance|Thriller", "production_year" : 2020, "budget" : 16770 }
+{ "_id" : ObjectId("622c3d3eef97528ca4c20d0d"), "id" : 395, "movie_name" : "Someone to Watch Over Me", "movie_genre" : "Action|Crime|Thriller", "production_year" : 2020, "budget" : 19806 }
+{ "_id" : ObjectId("622c3d3eef97528ca4c20d1a"), "id" : 408, "movie_name" : "Loch Ness", "movie_genre" : "Drama", "production_year" : 2020, "budget" : 10703 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20bb3"), "id" : 49, "movie_name" : "Robin Hood", "movie_genre" : "Adventure|Romance", "production_year" : 2019, "budget" : 12790 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20bf1"), "id" : 111, "movie_name" : "Cougars, Inc.", "movie_genre" : "Comedy|Drama", "production_year" : 2019, "budget" : 18854 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20c0a"), "id" : 136, "movie_name" : "Great Ziegfeld, The", "movie_genre" : "Drama|Musical", "production_year" : 2019, "budget" : 14777 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20c18"), "id" : 150, "movie_name" : "Disney Sing Along Songs: Under the Sea", "movie_genre" : "Animation|Children|Musical", "production_year" : 2019, "budget" : 13380 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20c19"), "id" : 151, "movie_name" : "Moonlight Serenade", "movie_genre" : "Drama", "production_year" : 2019, "budget" : 15233 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20c78"), "id" : 246, "movie_name" : "Even Angels Eat Beans", "movie_genre" : "Action|Comedy|Crime", "production_year" : 2019, "budget" : 10775 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20c7e"), "id" : 252, "movie_name" : "Saint Ralph", "movie_genre" : "Comedy|Drama", "production_year" : 2019, "budget" : 9067 }
+Type "it" for more
+> db.rohit.find().sort({production_year:-1}).pretty()
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b9e"),
+        "id" : 28,
+        "movie_name" : "Follow the Fleet",
+        "movie_genre" : "Comedy|Musical|Romance",
+        "production_year" : 2020,
+        "budget" : 14313
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20bcb"),
+        "id" : 73,
+        "movie_name" : "Heavenly Forest",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 16092
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20bd0"),
+        "id" : 78,
+        "movie_name" : "The Unexpected Love",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2020,
+        "budget" : 15734
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20bd9"),
+        "id" : 87,
+        "movie_name" : "Ramona and Beezus",
+        "movie_genre" : "Children|Comedy",
+        "production_year" : 2020,
+        "budget" : 19723
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20be3"),
+        "id" : 97,
+        "movie_name" : "Dragonball Evolution",
+        "movie_genre" : "Action|Adventure|Fantasy|Sci-Fi",
+        "production_year" : 2020,
+        "budget" : 18228
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c43"),
+        "id" : 193,
+        "movie_name" : "Not Here to Be Loved (Je ne suis pas là pour être aimé)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 11475
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c46"),
+        "id" : 196,
+        "movie_name" : "Sommersby",
+        "movie_genre" : "Drama|Mystery|Romance",
+        "production_year" : 2020,
+        "budget" : 10273
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c52"),
+        "id" : 208,
+        "movie_name" : "Lucky Night",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 11085
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c90"),
+        "id" : 270,
+        "movie_name" : "Hell Ride",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : 2020,
+        "budget" : 11458
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20ca2"),
+        "id" : 288,
+        "movie_name" : "Nothing to Lose",
+        "movie_genre" : "Action|Adventure|Comedy|Crime",
+        "production_year" : 2020,
+        "budget" : 15123
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20cae"),
+        "id" : 300,
+        "movie_name" : "Spy(ies) (Espion(s))",
+        "movie_genre" : "Drama|Romance|Thriller",
+        "production_year" : 2020,
+        "budget" : 16770
+}
+{
+        "_id" : ObjectId("622c3d3eef97528ca4c20d0d"),
+        "id" : 395,
+        "movie_name" : "Someone to Watch Over Me",
+        "movie_genre" : "Action|Crime|Thriller",
+        "production_year" : 2020,
+        "budget" : 19806
+}
+{
+        "_id" : ObjectId("622c3d3eef97528ca4c20d1a"),
+        "id" : 408,
+        "movie_name" : "Loch Ness",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 10703
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20bb3"),
+        "id" : 49,
+        "movie_name" : "Robin Hood",
+        "movie_genre" : "Adventure|Romance",
+        "production_year" : 2019,
+        "budget" : 12790
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20bf1"),
+        "id" : 111,
+        "movie_name" : "Cougars, Inc.",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2019,
+        "budget" : 18854
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c0a"),
+        "id" : 136,
+        "movie_name" : "Great Ziegfeld, The",
+        "movie_genre" : "Drama|Musical",
+        "production_year" : 2019,
+        "budget" : 14777
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c18"),
+        "id" : 150,
+        "movie_name" : "Disney Sing Along Songs: Under the Sea",
+        "movie_genre" : "Animation|Children|Musical",
+        "production_year" : 2019,
+        "budget" : 13380
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c19"),
+        "id" : 151,
+        "movie_name" : "Moonlight Serenade",
+        "movie_genre" : "Drama",
+        "production_year" : 2019,
+        "budget" : 15233
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c78"),
+        "id" : 246,
+        "movie_name" : "Even Angels Eat Beans",
+        "movie_genre" : "Action|Comedy|Crime",
+        "production_year" : 2019,
+        "budget" : 10775
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c7e"),
+        "id" : 252,
+        "movie_name" : "Saint Ralph",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2019,
+        "budget" : 9067
+}
+Type "it" for more
+> db.rohit.find().sort({production_year:1}).pretty()
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b8c"),
+        "id" : 10,
+        "movie_name" : "Dirty Dingus Magee",
+        "movie_genre" : "Comedy|Western",
+        "production_year" : 1990,
+        "budget" : 9962
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b98"),
+        "id" : 22,
+        "movie_name" : "Puckoon",
+        "movie_genre" : "Comedy",
+        "production_year" : 1990,
+        "budget" : 17060
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b9d"),
+        "id" : 27,
+        "movie_name" : "Waco: A New Revelation",
+        "movie_genre" : "Documentary",
+        "production_year" : 1990,
+        "budget" : 10708
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20bb6"),
+        "id" : 52,
+        "movie_name" : "Are You Listening?",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 17409
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20bd1"),
+        "id" : 79,
+        "movie_name" : "Exercice de l'État, L'",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 17032
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c33"),
+        "id" : 177,
+        "movie_name" : "Mr. Death: The Rise and Fall of Fred A. Leuchter, Jr.",
+        "movie_genre" : "Documentary",
+        "production_year" : 1990,
+        "budget" : 19871
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c50"),
+        "id" : 206,
+        "movie_name" : "Autumn Spring (Babí léto)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1990,
+        "budget" : 14508
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c61"),
+        "id" : 223,
+        "movie_name" : "Jungle Fever",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1990,
+        "budget" : 17427
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c65"),
+        "id" : 227,
+        "movie_name" : "Band of Brothers",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 1990,
+        "budget" : 18041
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c7a"),
+        "id" : 248,
+        "movie_name" : "Perils of Pauline, The",
+        "movie_genre" : "Comedy",
+        "production_year" : 1990,
+        "budget" : 17231
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c7d"),
+        "id" : 251,
+        "movie_name" : "Dark Blue World (Tmavomodrý svet)",
+        "movie_genre" : "Drama|War",
+        "production_year" : 1990,
+        "budget" : 11153
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c85"),
+        "id" : 259,
+        "movie_name" : "Week-End at the Waldorf",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1990,
+        "budget" : 16928
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20ca8"),
+        "id" : 294,
+        "movie_name" : "Ray",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 13233
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20cc6"),
+        "id" : 324,
+        "movie_name" : "Cast a Giant Shadow",
+        "movie_genre" : "Adventure|War",
+        "production_year" : 1990,
+        "budget" : 19908
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20cc8"),
+        "id" : 326,
+        "movie_name" : "Querelle",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 18905
+}
+{
+        "_id" : ObjectId("622c3d3eef97528ca4c20cf5"),
+        "id" : 371,
+        "movie_name" : "Electrick Children",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 18070
+}
+{
+        "_id" : ObjectId("622c3d3eef97528ca4c20d34"),
+        "id" : 434,
+        "movie_name" : "Sisters",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 1990,
+        "budget" : 16611
+}
+{
+        "_id" : ObjectId("622c3d3eef97528ca4c20d3d"),
+        "id" : 443,
+        "movie_name" : "Captain America: The First Avenger",
+        "movie_genre" : "Action|Adventure|Sci-Fi|Thriller|War",
+        "production_year" : 1990,
+        "budget" : 10406
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b89"),
+        "id" : 7,
+        "movie_name" : "Fire in the Blood",
+        "movie_genre" : "Documentary",
+        "production_year" : 1991,
+        "budget" : 18663
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b97"),
+        "id" : 21,
+        "movie_name" : "Other Guys, The",
+        "movie_genre" : "Action|Comedy",
+        "production_year" : 1991,
+        "budget" : 17696
+}
+Type "it" for more
+>
+> db.rohit.find().sort({production_year:-1}).pretty()
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b9e"),
+        "id" : 28,
+        "movie_name" : "Follow the Fleet",
+        "movie_genre" : "Comedy|Musical|Romance",
+        "production_year" : 2020,
+        "budget" : 14313
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20bcb"),
+        "id" : 73,
+        "movie_name" : "Heavenly Forest",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 16092
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20bd0"),
+        "id" : 78,
+        "movie_name" : "The Unexpected Love",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2020,
+        "budget" : 15734
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20bd9"),
+        "id" : 87,
+        "movie_name" : "Ramona and Beezus",
+        "movie_genre" : "Children|Comedy",
+        "production_year" : 2020,
+        "budget" : 19723
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20be3"),
+        "id" : 97,
+        "movie_name" : "Dragonball Evolution",
+        "movie_genre" : "Action|Adventure|Fantasy|Sci-Fi",
+        "production_year" : 2020,
+        "budget" : 18228
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c43"),
+        "id" : 193,
+        "movie_name" : "Not Here to Be Loved (Je ne suis pas là pour être aimé)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 11475
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c46"),
+        "id" : 196,
+        "movie_name" : "Sommersby",
+        "movie_genre" : "Drama|Mystery|Romance",
+        "production_year" : 2020,
+        "budget" : 10273
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c52"),
+        "id" : 208,
+        "movie_name" : "Lucky Night",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 11085
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c90"),
+        "id" : 270,
+        "movie_name" : "Hell Ride",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : 2020,
+        "budget" : 11458
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20ca2"),
+        "id" : 288,
+        "movie_name" : "Nothing to Lose",
+        "movie_genre" : "Action|Adventure|Comedy|Crime",
+        "production_year" : 2020,
+        "budget" : 15123
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20cae"),
+        "id" : 300,
+        "movie_name" : "Spy(ies) (Espion(s))",
+        "movie_genre" : "Drama|Romance|Thriller",
+        "production_year" : 2020,
+        "budget" : 16770
+}
+{
+        "_id" : ObjectId("622c3d3eef97528ca4c20d0d"),
+        "id" : 395,
+        "movie_name" : "Someone to Watch Over Me",
+        "movie_genre" : "Action|Crime|Thriller",
+        "production_year" : 2020,
+        "budget" : 19806
+}
+{
+        "_id" : ObjectId("622c3d3eef97528ca4c20d1a"),
+        "id" : 408,
+        "movie_name" : "Loch Ness",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 10703
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20bb3"),
+        "id" : 49,
+        "movie_name" : "Robin Hood",
+        "movie_genre" : "Adventure|Romance",
+        "production_year" : 2019,
+        "budget" : 12790
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20bf1"),
+        "id" : 111,
+        "movie_name" : "Cougars, Inc.",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2019,
+        "budget" : 18854
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c0a"),
+        "id" : 136,
+        "movie_name" : "Great Ziegfeld, The",
+        "movie_genre" : "Drama|Musical",
+        "production_year" : 2019,
+        "budget" : 14777
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c18"),
+        "id" : 150,
+        "movie_name" : "Disney Sing Along Songs: Under the Sea",
+        "movie_genre" : "Animation|Children|Musical",
+        "production_year" : 2019,
+        "budget" : 13380
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c19"),
+        "id" : 151,
+        "movie_name" : "Moonlight Serenade",
+        "movie_genre" : "Drama",
+        "production_year" : 2019,
+        "budget" : 15233
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c78"),
+        "id" : 246,
+        "movie_name" : "Even Angels Eat Beans",
+        "movie_genre" : "Action|Comedy|Crime",
+        "production_year" : 2019,
+        "budget" : 10775
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20c7e"),
+        "id" : 252,
+        "movie_name" : "Saint Ralph",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2019,
+        "budget" : 9067
+}
+Type "it" for more
+> db.rohit.find()
+{ "_id" : ObjectId("622c3d3def97528ca4c20b83"), "id" : 1, "movie_name" : "Story of Mankind, The", "movie_genre" : "Drama|Fantasy", "production_year" : 2016, "budget" : 9946 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b84"), "id" : 2, "movie_name" : "Starry starry night (Xing kong)", "movie_genre" : "Children|Drama|Fantasy", "production_year" : 2008, "budget" : 10923 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b85"), "id" : 3, "movie_name" : "Between the Folds", "movie_genre" : "Documentary", "production_year" : 2012, "budget" : 16541 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b86"), "id" : 4, "movie_name" : "Nora's Will (Cinco días sin Nora)", "movie_genre" : "Comedy|Drama", "production_year" : 1992, "budget" : 11919 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b87"), "id" : 5, "movie_name" : "Tale of Two Cities, A", "movie_genre" : "Drama|Romance", "production_year" : 2005, "budget" : 17625 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b88"), "id" : 6, "movie_name" : "Machine Girl, The (Kataude mashin gâru)", "movie_genre" : "Action|Comedy|Fantasy|Horror|Thriller", "production_year" : 1992, "budget" : 18471 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b89"), "id" : 7, "movie_name" : "Fire in the Blood", "movie_genre" : "Documentary", "production_year" : 1991, "budget" : 18663 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8a"), "id" : 8, "movie_name" : "And Soon the Darkness", "movie_genre" : "Mystery|Thriller", "production_year" : 1993, "budget" : 11181 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8b"), "id" : 9, "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)", "movie_genre" : "Crime|Drama|Mystery|Thriller|War", "production_year" : 2000, "budget" : 19800 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8c"), "id" : 10, "movie_name" : "Dirty Dingus Magee", "movie_genre" : "Comedy|Western", "production_year" : 1990, "budget" : 9962 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8d"), "id" : 11, "movie_name" : "Thesis (Tesis)", "movie_genre" : "Drama|Horror|Thriller", "production_year" : 2005, "budget" : 9107 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8e"), "id" : 12, "movie_name" : "Tokyo Twilight (Tôkyô boshoku)", "movie_genre" : "Drama", "production_year" : 1999, "budget" : 13817 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8f"), "id" : 13, "movie_name" : "Killer Is Loose, The", "movie_genre" : "Crime|Drama|Film-Noir", "production_year" : 2005, "budget" : 19538 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b90"), "id" : 14, "movie_name" : "Macbeth", "movie_genre" : "Drama", "production_year" : 2005, "budget" : 17329 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b91"), "id" : 15, "movie_name" : "Let it Come Down: The Life of Paul Bowles", "movie_genre" : "Documentary", "production_year" : 1999, "budget" : 13617 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b92"), "id" : 16, "movie_name" : "Hellraiser: Deader", "movie_genre" : "Horror", "production_year" : 2002, "budget" : 11005 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b93"), "id" : 17, "movie_name" : "Honkytonk Man", "movie_genre" : "Comedy|Drama", "production_year" : 2005, "budget" : 17554 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b94"), "id" : 18, "movie_name" : "Get Out of My Room", "movie_genre" : "Comedy", "production_year" : 2002, "budget" : 15777 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b95"), "id" : 19, "movie_name" : "Life Aquatic with Steve Zissou, The", "movie_genre" : "Adventure|Comedy|Fantasy", "production_year" : 2013, "budget" : 10515 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b96"), "id" : 20, "movie_name" : "Crying Freeman", "movie_genre" : "Action|Crime|Thriller", "production_year" : 2006, "budget" : 13299 }
+Type "it" for more
+>
+>
+>
+>
+>
+> db.rohit.find({id:{$lte:10} })
+{ "_id" : ObjectId("622c3d3def97528ca4c20b83"), "id" : 1, "movie_name" : "Story of Mankind, The", "movie_genre" : "Drama|Fantasy", "production_year" : 2016, "budget" : 9946 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b84"), "id" : 2, "movie_name" : "Starry starry night (Xing kong)", "movie_genre" : "Children|Drama|Fantasy", "production_year" : 2008, "budget" : 10923 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b85"), "id" : 3, "movie_name" : "Between the Folds", "movie_genre" : "Documentary", "production_year" : 2012, "budget" : 16541 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b86"), "id" : 4, "movie_name" : "Nora's Will (Cinco días sin Nora)", "movie_genre" : "Comedy|Drama", "production_year" : 1992, "budget" : 11919 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b87"), "id" : 5, "movie_name" : "Tale of Two Cities, A", "movie_genre" : "Drama|Romance", "production_year" : 2005, "budget" : 17625 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b88"), "id" : 6, "movie_name" : "Machine Girl, The (Kataude mashin gâru)", "movie_genre" : "Action|Comedy|Fantasy|Horror|Thriller", "production_year" : 1992, "budget" : 18471 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b89"), "id" : 7, "movie_name" : "Fire in the Blood", "movie_genre" : "Documentary", "production_year" : 1991, "budget" : 18663 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8a"), "id" : 8, "movie_name" : "And Soon the Darkness", "movie_genre" : "Mystery|Thriller", "production_year" : 1993, "budget" : 11181 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8b"), "id" : 9, "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)", "movie_genre" : "Crime|Drama|Mystery|Thriller|War", "production_year" : 2000, "budget" : 19800 }
+{ "_id" : ObjectId("622c3d3def97528ca4c20b8c"), "id" : 10, "movie_name" : "Dirty Dingus Magee", "movie_genre" : "Comedy|Western", "production_year" : 1990, "budget" : 9962 }
+>
+> db.rohit.find({id:{$lte:10}}).pretty)(
+uncaught exception: SyntaxError: unexpected token: ')' :
+@(shell):1:36
+> db.rohit.find({id:{$lte:10}}).pretty()\
+uncaught exception: SyntaxError: "" literal not terminated before end of script :
+@(shellhelp1):1:67
+error2:SyntaxError: "" literal not terminated before end of script :
+@(shellhelp1):1:67
+
+> db.rohit.find({id:{$lte:10}}).pretty()
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b83"),
+        "id" : 1,
+        "movie_name" : "Story of Mankind, The",
+        "movie_genre" : "Drama|Fantasy",
+        "production_year" : 2016,
+        "budget" : 9946
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b84"),
+        "id" : 2,
+        "movie_name" : "Starry starry night (Xing kong)",
+        "movie_genre" : "Children|Drama|Fantasy",
+        "production_year" : 2008,
+        "budget" : 10923
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b85"),
+        "id" : 3,
+        "movie_name" : "Between the Folds",
+        "movie_genre" : "Documentary",
+        "production_year" : 2012,
+        "budget" : 16541
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b86"),
+        "id" : 4,
+        "movie_name" : "Nora's Will (Cinco días sin Nora)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1992,
+        "budget" : 11919
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b87"),
+        "id" : 5,
+        "movie_name" : "Tale of Two Cities, A",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2005,
+        "budget" : 17625
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b88"),
+        "id" : 6,
+        "movie_name" : "Machine Girl, The (Kataude mashin gâru)",
+        "movie_genre" : "Action|Comedy|Fantasy|Horror|Thriller",
+        "production_year" : 1992,
+        "budget" : 18471
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b89"),
+        "id" : 7,
+        "movie_name" : "Fire in the Blood",
+        "movie_genre" : "Documentary",
+        "production_year" : 1991,
+        "budget" : 18663
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b8a"),
+        "id" : 8,
+        "movie_name" : "And Soon the Darkness",
+        "movie_genre" : "Mystery|Thriller",
+        "production_year" : 1993,
+        "budget" : 11181
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b8b"),
+        "id" : 9,
+        "movie_name" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller|War",
+        "production_year" : 2000,
+        "budget" : 19800
+}
+{
+        "_id" : ObjectId("622c3d3def97528ca4c20b8c"),
+        "id" : 10,
+        "movie_name" : "Dirty Dingus Magee",
+        "movie_genre" : "Comedy|Western",
+        "production_year" : 1990,
+        "budget" : 9962
+}
+> db.rohit.find({id:{$lte:10}}).pretty().remove(movie_genre)
+uncaught exception: ReferenceError: movie_genre is not defined :
+@(shell):1:1
+> db.rohit.find({id:{$lte:10}}).pretty().remove({movie_genre: })
+uncaught exception: SyntaxError: expected expression, got '}' :
+@(shell):1:60
+>
+>
